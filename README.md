@@ -73,4 +73,4 @@ cd code && python verify_pipeline.py   # 端到端自检（全部 PASS 即环境
 
 ## 引用与许可
 
-引用信息待论文正式发表后补充。代码与数据的许可协议由作者后续指定（默认保留所有权利）。
+引用信息待论文正式发表后补充。代码与数据采用 MIT License（见 `LICENSE`）。
