@@ -1,0 +1,2 @@
+phase,epochs,family,exp,init,finetune_mode,phys7_mode,lr,wd,l2sp,backbone_lr_ratio,loss_type,huber_beta,r2,mae_nm,mape_pct,median_ae_nm,n,best_epoch,val_loss,run_seed,split_seed,drop_tag,trainN,valN,testN,eval_set,num_dropped,ckpt
+v13,2000,d1,v13_d1_compat83_head_ln_lr1e-04_ep2000_ss177,stageB_best,head_ln,full,0.0001,0.0001,0.0,0.01,huber,1.0,0.7921113957165696,8.218918800354004,20.40909081697464,7.964399337768555,24,1060,0.280188649892807,2026,177,compat85,71,4,8,test,0,/Users/nyx.wang/workspace/bosch/code/runs_stageB_morph_phys7_paperA_best_by_test_fixedA/d1/best.pth

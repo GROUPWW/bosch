@@ -1,0 +1,40 @@
+{
+  "per_head": [
+    {
+      "head_index": 0,
+      "family": "logGamma_SF6_tot",
+      "best_val_r2": 0.9901662468910217
+    },
+    {
+      "head_index": 1,
+      "family": "pF_SF6",
+      "best_val_r2": 0.9399361610412598
+    },
+    {
+      "head_index": 2,
+      "family": "spread_SF6",
+      "best_val_r2": 0.9968419671058655
+    },
+    {
+      "head_index": 3,
+      "family": "qskew_SF6",
+      "best_val_r2": 0.9983775615692139
+    },
+    {
+      "head_index": 4,
+      "family": "logGamma_C4F8_tot",
+      "best_val_r2": 0.9983324408531189
+    },
+    {
+      "head_index": 5,
+      "family": "rho_C4F8",
+      "best_val_r2": 0.9989237189292908
+    },
+    {
+      "head_index": 6,
+      "family": "spread_C4F8",
+      "best_val_r2": 0.9522145986557007
+    }
+  ],
+  "r2_min": 0.9399361610412598
+}

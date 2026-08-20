@@ -1,0 +1,108 @@
+defect_guard — R1-C2 缺陷护栏（CPU）
+数据: Bosch_aug_v14_109.xlsx + ../materials/新补实验数据记录V2.csv
+
+已测配方 40 条：pos=5, neg=34, temp_anomaly=1（单独类，不进训练/评估）
+未测/不可评（-20°C，登记不进任何集合）: ['B117', 'B118', 'B119']
+========================================================================
+Part A · 数据 QC 规则（后验）
+========================================================================
+规则定稿：R1 temp≠-10°C | R2 w@9/w@1>1.3 且 w@9>1000nm | R3 w@9>w@1 且 中段收窄≥4% 且 末段反弹≥1.12
+
+逐配方规则判定表（已测 40 条；temp_anomaly 单独列出，不计入混淆矩阵）：
+recipe  temp_C label     w1     w3     w5     w9  w_ratio     w_dip  w_rebound   h_jump  R1_temp  R2_wexplode  R3_bowing  flag
+  B177     -10   pos  673.0  911.0 1080.0 1180.0 1.753343 -0.353640   1.295280 1.126866    False         True      False  True
+  B215     -10   pos  862.0  957.0 1040.0 1160.0 1.345708 -0.110209   1.212121 1.305000    False         True      False  True
+  B143       0   pos  606.0  689.0  735.0  778.0 1.283828 -0.136964   1.129173 0.295547     True        False      False  True
+  B192     -10   pos 1230.0 1180.0 1370.0 1550.0 1.260163  0.040650   1.313559 0.428358    False        False       True  True
+  B166     -10   pos  592.0  532.0  552.0  605.0 1.021959  0.101351   1.137218 0.093220    False        False       True  True
+  B212     -10   neg  613.0  836.0  905.0  960.0 1.566069 -0.363785   1.148325 0.421212    False        False      False False
+  B176     -10   neg  568.0  742.0  821.0  881.0 1.551056 -0.306338   1.187332 0.210667    False        False      False False
+  B201     -10   neg  642.0  774.0  841.0  912.0 1.420561 -0.205607   1.178295 0.754658    False        False      False False
+  B207     -10   neg  562.0  704.0  744.0  784.0 1.395018 -0.252669   1.113636 0.379167    False        False      False False
+  B200     -10   neg  550.0  617.0  665.0  708.0 1.287273 -0.121818   1.147488 0.215753    False        False      False False
+  B210     -10   neg  575.0  611.0  638.0  674.0 1.172174 -0.062609   1.103110 0.237762    False        False      False False
+  B204     -10   neg  722.0  712.0  757.0  821.0 1.137119  0.013850   1.153090 0.161644    False        False      False False
+  B127     -10   neg  652.0  687.0  662.0  702.0 1.076687 -0.015337   1.060423 0.138462    False        False      False False
+  B137     -10   neg  574.0  610.0  604.0  610.0 1.062718 -0.052265   1.009934 0.588710    False        False      False False
+  B189     -10   neg  810.0  790.0  797.0  850.0 1.049383  0.024691   1.075949 0.071739    False        False      False False
+  B138     -10   neg  552.0  532.0  539.0  572.0 1.036232  0.036232   1.075188 0.070815    False        False      False False
+  B168     -10   neg  755.0  693.0  733.0  775.0 1.026490  0.082119   1.118326 0.251656    False        False      False False
+  B134     -10   neg  514.0  518.0  518.0  526.0 1.023346 -0.007782   1.015444 0.220000    False        False      False False
+  B171     -10   neg  605.0  606.0  614.0  619.0 1.023140 -0.001653   1.021452 0.533898    False        False      False False
+  B196     -10   neg  912.0  998.0  949.0  924.0 1.013158 -0.040570   0.973656 0.091675    False        False      False False
+  B202     -10   neg  584.0  547.0  564.0  577.0 0.988014  0.063356   1.054845 0.217391    False        False      False False
+  B169     -10   neg  585.0  583.0  551.0  577.0 0.986325  0.058120   1.047187 0.274038    False        False      False False
+  B173     -10   neg  551.0  590.0  554.0  514.0 0.932849 -0.005445   0.927798 0.015000    False        False      False False
+  B206     -10   neg  497.0  470.0  455.0  463.0 0.931590  0.084507   1.017582 0.156098    False        False      False False
+  B213     -10   neg  614.0  627.0  574.0  571.0 0.929967  0.065147   0.994774 0.213043    False        False      False False
+  B125     -10   neg  446.0  410.0  412.0  410.0 0.919283  0.080717   1.000000 0.316294    False        False      False False
+  B126     -10   neg  515.0  473.0  450.0  473.0 0.918447  0.126214   1.051111 0.158416    False        False      False False
+  B209     -10   neg  687.0  647.0  598.0  623.0 0.906841  0.129549   1.041806 0.079365    False        False      False False
+  B135     -10   neg  577.0  585.0  558.0  510.0 0.883882  0.032929   0.913978 0.110193    False        False      False False
+  B191     -10   neg  641.0  666.0  633.0  566.0 0.882995  0.012480   0.894155 0.146835    False        False      False False
+  B211     -10   neg  528.0  511.0  475.0  458.0 0.867424  0.100379   0.964211 0.250000    False        False      False False
+  B170     -10   neg  526.0  520.0  486.0  455.0 0.865019  0.076046   0.936214 0.198925    False        False      False False
+  B181     -10   neg  674.0  611.0  548.0  580.0 0.860534  0.186944   1.058394 0.198370    False        False      False False
+  B208     -10   neg  481.0  448.0  415.0  392.0 0.814969  0.137214   0.944578 0.088106    False        False      False False
+  B132     -10   neg  553.0  479.0  469.0  449.0 0.811935  0.151899   0.957356 0.240964    False        False      False False
+  B128     -10   neg  744.0  724.0  671.0  592.0 0.795699  0.098118   0.882265 0.130604    False        False      False False
+  B214     -10   neg  670.0  534.0  529.0  529.0 0.789552  0.210448   1.000000 0.094787    False        False      False False
+  B174     -10   neg  362.0  406.0  342.0  281.0 0.776243  0.055249   0.821637 0.082192    False        False      False False
+  B178     -10   neg  494.0  363.0  331.0  300.0 0.607287  0.329960   0.906344 0.107914    False        False      False False
+
+温度异常类（单独登记，不进训练/评估；被 R1 正确标记为超分布）：
+recipe  temp_C        label    w1    w3    w5    w9  w_ratio     w_dip  w_rebound   h_jump  R1_temp  R2_wexplode  R3_bowing  flag
+  B116     -20 temp_anomaly 593.0 625.0 649.0 704.0 1.187184 -0.053963     1.1264 0.040541     True        False      False  True
+
+混淆矩阵（n=39 = 5 pos + 34 neg）：
+  TP=5  FN=0  |  recall    = 5/5 = 1.000
+  FP=0  TN=34  |  precision = 5/5 = 1.000   FPR = 0/34 = 0.000
+  误报: 无   漏报: 无
+  正例 B143: 捕获规则=['R1_temp'] (w_ratio=1.284, dip=-0.137, rebound=1.129, h_jump=0.296)
+  正例 B166: 捕获规则=['R3_bowing'] (w_ratio=1.022, dip=0.101, rebound=1.137, h_jump=0.093)
+  正例 B177: 捕获规则=['R2_wexplode'] (w_ratio=1.753, dip=-0.354, rebound=1.295, h_jump=1.127)
+  正例 B192: 捕获规则=['R3_bowing'] (w_ratio=1.260, dip=0.041, rebound=1.314, h_jump=0.428)
+  正例 B215: 捕获规则=['R2_wexplode'] (w_ratio=1.346, dip=-0.110, rebound=1.212, h_jump=1.305)
+
+[OK] 5 条正例全部被规则捕获
+
+========================================================================
+Part B · recipe→P(缺陷) 分类器（先验，LOO-CV）
+========================================================================
+获取 stageA phys7 描述符（CPU）...
+  LOO AUC [recipe-only  ] [LogReg ] = 0.718  (n=39, pos=5)
+  LOO AUC [recipe-only  ] [GBM    ] = 0.559  (n=39, pos=5)
+  LOO AUC [recipe+phys7 ] [LogReg ] = 0.735  (n=39, pos=5)
+  LOO AUC [recipe+phys7 ] [GBM    ] = 0.365  (n=39, pos=5)
+
+5 条正例的 LOO 预测概率（按 GBM recipe+phys7 排序）：
+  recipe      recipe-only/LogReg       recipe-only/GBM   recipe+phys7/LogReg      recipe+phys7/GBM
+  B177                     0.781                 0.984                 0.951                 0.691
+  B192                     0.175                 0.085                 0.115                 0.247
+  B166                     0.033                 0.002                 0.021                 0.000
+  B143                     0.119                 0.000                 0.213                 0.000
+  B215                     0.949                 0.000                 0.704                 0.000
+
+特征重要性 top5 [recipe-only]（GBM, 全量 fit）：
+  source_RF            0.384
+  C4F8                 0.275
+  etch_time            0.218
+  LF_RF                0.111
+  APC                  0.007
+
+特征重要性 top5 [recipe+phys7]（GBM, 全量 fit）：
+  source_RF            0.393
+  etch_time            0.122
+  logGamma_C4F8_tot    0.103
+  spread_C4F8          0.100
+  spread_SF6           0.073
+
+参考：B116（-20°C 温度异常，未参与训练/评估）不属于本二分类口径，未单独预测。
+
+========================================================================
+结论与局限
+========================================================================
+- 规则护栏（后验 QC）：5/5 正例捕获，是主防线；阈值从 40 条已测数据归纳，B166/B192 依赖 R3 bowing 剖面规则，个别样本贴近阈值（B166 rebound=1.137 vs 1.12，B192 dip=4.07% vs 4%），新数据到来时应复核。
+- 分类器（先验）：正例仅 5 条，LOO AUC 波动大，仅作量化补充（proof-of-concept）；GBM AUC recipe-only=0.559 / recipe+phys7=0.365。
+- B143 的缺陷由 0°C 温度驱动，但 stageB 的 7 维 recipe 特征不含温度；先验分类器对温度型缺陷的识别能力有限，温度由 R1 规则兜底。
+- B117/118/119（未测、-20°C）待作者确认上机失败后再决定是否并入正例。

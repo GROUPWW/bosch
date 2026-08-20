@@ -1,0 +1,24 @@
+{
+  "source": "hyper_sweep_fixedA",
+  "sweep_root": "code/runs_stageB_morph_phys7_paperA_hyper_sweep_fixedA",
+  "selected_hp_tag": "lr0p001_wd0p0001_do0p1_dm256_L2_hb0p1",
+  "split_seed": 3,
+  "train_seed": 42,
+  "metrics": {
+    "zmin": 0.980463,
+    "h_avg": 0.952686,
+    "d_avg": 0.953396,
+    "w": 0.97097,
+    "min_metric": 0.952686,
+    "all_ok": true
+  },
+  "per_family_r2": {
+    "zmin": 0.980463,
+    "h0": 0.967246,
+    "h1": 0.938126,
+    "d0": 0.966484,
+    "d1": 0.940308,
+    "w": 0.97097
+  },
+  "paper_aligned": true
+}

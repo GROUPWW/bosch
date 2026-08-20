@@ -1,0 +1,36 @@
+{
+  "case_xlsx": "/Users/nyx.wang/workspace/bosch/code/case_with_phys7_156.xlsx",
+  "iedf_root": "/Users/nyx.wang/workspace/bosch/code/iedf_data",
+  "targets": {
+    "SF6_sheath2": [
+      "F_1p",
+      "SF3_1p",
+      "SF4_1p",
+      "SF5_1p"
+    ],
+    "C4F8_sheath1": [
+      "CF3_1p",
+      "C2F3_1p"
+    ]
+  },
+  "ngrid": {
+    "SF6_sheath2": 128,
+    "C4F8_sheath1": 64
+  },
+  "pca_k": 7,
+  "X_dim": 640,
+  "n_samples_used": 156,
+  "explained_variance_ratio": [
+    0.42484759662557964,
+    0.15079244659562682,
+    0.11093413839579187,
+    0.07644710538049054,
+    0.061306446364242706,
+    0.05279541123974519,
+    0.03539827239452157
+  ],
+  "explained_variance_ratio_sum": 0.9125214169959983,
+  "missing_file_segments_count": 0,
+  "missing_ion_columns_total": 0,
+  "out_xlsx": "/Users/nyx.wang/workspace/bosch/code/case_with_pca7_156.xlsx"
+}

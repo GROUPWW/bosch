@@ -1,0 +1,32 @@
+{
+  "selected_by": "hyper_sweep_min_metric",
+  "split_seed": 3,
+  "train_seed": 42,
+  "hp_tag": "lr0p001_wd0p0001_do0p1_dm256_L2_hb0p1",
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "tf_dropout": 0.1,
+  "tf_d_model": 256,
+  "tf_layers": 2,
+  "loss_type": "huber",
+  "huber_beta": 0.1,
+  "epochs": 200,
+  "early_patience": 30,
+  "test_eval_every": 5,
+  "metrics": {
+    "zmin": 0.980463,
+    "h_avg": 0.952686,
+    "d_avg": 0.953396,
+    "w": 0.97097,
+    "min_metric": 0.952686,
+    "all_ok": true
+  },
+  "per_family_r2": {
+    "zmin": 0.980463,
+    "h0": 0.967246,
+    "h1": 0.938126,
+    "d0": 0.966484,
+    "d1": 0.940308,
+    "w": 0.97097
+  }
+}

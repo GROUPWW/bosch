@@ -1,0 +1,14 @@
+{
+  "case_xlsx": "/Users/nyx.wang/workspace/bosch/code/case_with_phys7_156.xlsx",
+  "in_dim": 640,
+  "latent_k": 7,
+  "hidden": 128,
+  "epochs": 3000,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "seed": 0,
+  "final_recon_mse": 0.0007597736548632383,
+  "recon_r2_train": 0.9992402263176747,
+  "n_samples_used": 156,
+  "out_xlsx": "/Users/nyx.wang/workspace/bosch/code/case_with_ae7_156.xlsx"
+}

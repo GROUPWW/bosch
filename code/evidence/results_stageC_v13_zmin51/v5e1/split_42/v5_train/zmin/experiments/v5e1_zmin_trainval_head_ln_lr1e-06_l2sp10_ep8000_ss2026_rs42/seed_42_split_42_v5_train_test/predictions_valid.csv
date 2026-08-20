@@ -1,0 +1,9 @@
+family,exp,run_seed,split_seed,drop_tag,eval_set,recipe_idx,recipe_row_1based,recipe_row_source,recipe_id,time_idx,time_value,time_label,y_true_nm,y_pred_nm,abs_err_nm
+zmin,v5e1_zmin_trainval_head_ln_lr1e-06_l2sp10_ep8000_ss2026_rs42,42,42,v5_train,test,2,4,excel_map,B12,8,9.0,9,3514.0,3459.3215,54.678467
+zmin,v5e1_zmin_trainval_head_ln_lr1e-06_l2sp10_ep8000_ss2026_rs42,42,42,v5_train,test,5,7,excel_map,B17,8,9.0,9,1982.0,1892.546,89.45398
+zmin,v5e1_zmin_trainval_head_ln_lr1e-06_l2sp10_ep8000_ss2026_rs42,42,42,v5_train,test,7,9,excel_map,B27,8,9.0,9,1997.0,1762.8386,234.16138
+zmin,v5e1_zmin_trainval_head_ln_lr1e-06_l2sp10_ep8000_ss2026_rs42,42,42,v5_train,test,13,15,excel_map,B30,8,9.0,9,1827.0,1719.7808,107.21924
+zmin,v5e1_zmin_trainval_head_ln_lr1e-06_l2sp10_ep8000_ss2026_rs42,42,42,v5_train,test,19,21,excel_map,B26,8,9.0,9,1156.0,1179.7347,23.734741
+zmin,v5e1_zmin_trainval_head_ln_lr1e-06_l2sp10_ep8000_ss2026_rs42,42,42,v5_train,test,25,27,excel_map,B36,8,9.0,9,2055.0,1645.4723,409.5277
+zmin,v5e1_zmin_trainval_head_ln_lr1e-06_l2sp10_ep8000_ss2026_rs42,42,42,v5_train,test,30,32,excel_map,B45,8,9.0,9,2211.0,2263.2139,52.213867
+zmin,v5e1_zmin_trainval_head_ln_lr1e-06_l2sp10_ep8000_ss2026_rs42,42,42,v5_train,test,40,42,excel_map,B70,8,9.0,9,1477.0,1480.5172,3.517212
