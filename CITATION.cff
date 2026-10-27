@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Physics-informed transfer learning for data-efficient prediction and optimization of nanoscale Bosch etching"
+authors:
+  - family-names: Ding
+    given-names: Yikang
+  - family-names: Wang
+    given-names: Ningyu
+version: 1.0.1
+date-released: 2026-10-27
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23685097
+repository-code: "https://github.com/GROUPWW/bosch"
+license: MIT
+abstract: "Code for the Nature Communications manuscript on physics-informed transfer learning for Bosch DRIE morphology prediction."
